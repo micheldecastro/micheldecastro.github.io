@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Citroën Jumpy | SAVOL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost/_savol/citroen-jumpy" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel=preload href="fonts/VWHead/regular/VWHead-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <title>Citroën Jumpy | SAVOL</title>
+
+
+    <style>
+        * {
+            --red: #ee4d57;
+            font-family: 'Citroen', Helvetica, Arial, sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Citroen';
+            src: local('Citroen'),
+                url('fonts/Citroen/regular/Citroen.woff2') format('woff2'),
+                url('fonts/Citroen/regular/Citroen.woff') format('woff'),
+                url('fonts/Citroen/regular/Citroen.ttf') format('truetype');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Citroen';
+            src: local('Citroen-Bold'),
+                url('fonts/Citroen/bold/Citroen-Bold.woff2') format('woff2'),
+                url('fonts/Citroen/bold/Citroen-Bold.woff') format('woff'),
+                url('fonts/Citroen/bold/Citroen-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Citroen';
+            src: local('Citroen Black'), local('Citroen-Black'),
+                url('fonts/Citroen/black/Citroen-Black.woff2') format('woff2'),
+                url('fonts/Citroen/black/Citroen-Black.woff') format('woff'),
+                url('fonts/Citroen/black/Citroen-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-display: swap;
+        }
+
+        .font-roboto {
+            font-family: "Roboto", Helvetica, Arial, sans-serif
+        }
+
+        .fw-black {
+            font-weight: 900
+        }
+
+        header,
+        .formulario {
+            background-color: #cccccc
+        }
+
+        .form-check .form-check-input {
+            margin-left: -2em;
+            width: 25px;
+            height: 25px;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--red);
+            border-color: var(--red);
+        }
+
+        .form-check-input:focus {
+            border-color: #fff;
+            box-shadow: 0 0 0 0.25rem #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container text-center">
+            <a href="0km/citroen" target="_blank"><img src="img/Logotipo-savol-citroen.png" alt="logo savol"
+                    class="img-fluid my-4"></a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Citroën Jumpy</h1>
+        <div class="container">
+            <div class="row align-items-center pb-5">
+                <div class="col-lg-6">
+                    <img loading="lazy" src="img/banner.png" alt="Banner Jumpy Furgão e Minibus" width="594"
+                        height="467" class="img-fluid mt-5 mt-lg-0">
+                </div>
+                <div class="col-lg-6">
+                    <div class="formulario px-4 px-sm-5 py-4 mt-5">
+                        <h2 class="h3 text-danger fw-black text-uppercase mt-3 mt-sm-4 mb-0">Ficou interessado na
+                            oferta?</h2>
+                        <p class="font-roboto">Preencha o formulário abaixo que entraremos em contato.</p>
+
+                        <form action="#" method="post">
+
+                            <input type="hidden" name="pog">
+                            <input type="hidden" name="marca" value="citroen">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control bg-light rounded-3" id="nome" name="nome"
+                                    placeholder="Nome" required>
+                                <label for="nome" class="fs-5 fw-black text-secondary text-uppercase ps-4">Nome:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control bg-light rounded-3" id="email" name="email"
+                                    placeholder="name@example.com" required>
+                                <label for="email"
+                                    class="fs-5 fw-black text-secondary text-uppercase ps-4">E-mail:</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="phone form-control bg-light rounded-3" id="telefone"
+                                    name="telefone" placeholder="(00)00000-0000" required>
+                                <label for="telefone"
+                                    class="fs-5 fw-black text-secondary text-uppercase ps-4">Telefone:</label>
+                            </div>
+                            <div class="bg-light rounded-3">
+                                <div class="row gx-0 py-1">
+                                    <div class="col-xl-auto pt-2"><label for="veiculo"
+                                            class="fs-5 fw-black text-secondary text-uppercase ms-4">Escolha o
+                                            modelo:</label></div>
+                                    <div class="col">
+                                        <select id="veiculo" name="veiculo"
+                                            class="form-select form-select-lg font-roboto text-secondary bg-light fst-italic border-0 rounded-0"
+                                            aria-label="veiculo">
+                                            <option value="Jumpy Furgão">Jumpy Furgão</option>
+                                            <option value="Jumpy Minibus">Jumpy Minibus</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check mt-4 ms-2">
+                                <input class="form-check-input" type="checkbox" value="S" name="autorizodados"
+                                    id="autorizodados">
+                                <label class="form-check-label font-roboto ms-3" for="autorizodados">
+                                    Eu aceito receber contato via e-mail e WhatsApp de um consultor autorizado da Savol
+                                    Citroen
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-danger btn-lg fw-black w-100 mt-3">ENVIAR</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col fw-bold fs-4">
+                    <p class="mb-0">Unidades: SA - Av. Artur de Queirós, 424 | SBC - Av. Senador Vergueiro, 2302</p>
+                    <p class="mb-0">Telefone: 11 3381-1001 | WhatsApp: 11 4435-1010</p>
+                </div>
+                <div class="col-xl-auto">
+                    <img loading="lazy" src="img/ibama_logo.png" title="No trânsito, sua responsabilidade salva vidas."
+                        alt="frase Ibama - No trânsito, sua responsabilidade salva vidas." class="img-fluid">
+                    <span class="small text-secondary fw-bold" style="vertical-align:bottom">No trânsito, sua
+                        responsabilidade salva vidas.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="//cdn.jsdelivr.net/npm/jquery@1.11.0/dist/jquery.min.js"
+        integrity="sha256-zVknrS+JpN2lrDTZH1Jq9KiVFHsKDscFsx93mzIMvmo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('.phone').mask('(00) 000000000');
+        });  
+    </script>
+
+</body>
+
+</html>
